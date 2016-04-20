@@ -1,2 +1,2 @@
-#hello-apps
+#sandbox
 First examples of several technologies
