@@ -49,7 +49,6 @@ local.properties
 # Intellij
 ######################
 .idea/**
-.idea/workspace.xml
 *.iml
 *.iws
 *.ipr
