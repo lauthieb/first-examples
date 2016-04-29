@@ -1,19 +1,23 @@
-db:
-  image: lauthiebsql:latest
-  ports:
-    - "3306:3306"
-  privileged: true
-  volumes:
-    - ./data:/var/lib/mysql
-  environment:
-    - MYSQL_ROOT_PASSWORD=password
-    - MYSQL_DATABASE=demo
-    - MYSQL_USER=demo_user
-    - MYSQL_PASSWORD=demo_password
+version: '2'
+services:
+  db:
+    image: lauthiebsql:latest
+    ports:
+      - "3306:3306"
+    privileged: true
+    volumes:
+      - ./data:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+      - MYSQL_DATABASE=demo
+      - MYSQL_USER=demo_user
+      - MYSQL_PASSWORD=demo_password
 
-spring-boot:
-  image: spring-boot:latest
-  ports:
-    - "8080:8083"
-  links:
-    - db:db
+  spring-boot:
+    image: spring-boot:latest
+    ports:
+      - "8080:8083"
+    depends_on:
+      - db
+    links:
+      - db:db
