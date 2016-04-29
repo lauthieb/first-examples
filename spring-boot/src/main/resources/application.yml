@@ -27,4 +27,4 @@ flyway:
   password: password
   sql-migration-prefix: V
   sql-migration-suffix: .sql
-  locations: classpath:db/migration
+  locations: db/migration
