@@ -8,3 +8,4 @@ First examples of several technologies :
 * Docker-mysql
 * React
 * Spring Boot
+* Webpack
