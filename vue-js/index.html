@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.css">
+        <style>
+            .main.container {
+                padding-top: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="ui inverted fixed menu">
+            <div class="header item">vue-js</div>
+        </div>
+
+        <div class="ui main container" id="app">
+            <input type="text" v-model="message" @keyup.space="demo">
+            <input type="checkbox" v-model="success">
+            <a :href="link" :title="message">{{ message }}</a>
+            <div class="ui success message" v-if="success">
+                <i class="close icon" @click="close"></i>
+                <p>Bravo</p>
+            </div>
+            <div class="ui error message" v-else="">
+                <p>Dommage</p>
+            </div>
+            <ul>
+                <li v-for="person in persons">{{person}}</li>
+            </ul>
+            <div class="ui message" :class="{success: success, error: !success}">{{success}}</div>
+            <h2 class="ui message" :class="cls">{{ seconds }}</h2>
+            <p>Prenom : {{firstName}}</p>
+            <p>Nom : {{lastName}}</p>
+            <label>Nom complet : </label><input type="text" v-model="fullName">
+            <p @click="demo">
+                <a href="http://google.fr" @click.prevent.stop="demo2">N'y va pas !</a>
+            </p>
+            <input type="text" v-salut="message"></input>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.0-rc.7/vue.js"></script>
+        <script src="js/app.js"></script>
+    </body>
+</html>
