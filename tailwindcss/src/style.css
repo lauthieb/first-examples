@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .input {
+    @apply border shadow-inner border-gray-300 py-2 px-3 text-gray-700 w-full;
+  }
+
+  .input:focus {
+    @apply shadow-2xl;
+  }
+
+  .btn {
+    @apply bg-blue-500 text-white px-4 py-2 rounded;
+  }
+
+  .btn:hover {
+    @apply bg-blue-600;
+  }
+
+  .login-card {
+    @apply bg-white shadow-lg max-w-lg;
+  }
+
+  @screen md {
+    .login-card {
+      @apply flex;
+    }
+  }
+}

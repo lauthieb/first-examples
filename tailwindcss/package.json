@@ -1,0 +1,21 @@
+{
+  "name": "tailwindcss-sandbox",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "NODE_ENV=production rm -rf dist && npx parcel build src/index.html",
+    "start": "rm -rf dist && npx parcel src/index.html",
+    "lint": "prettier --write ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.3.11",
+    "postcss-cli": "^9.0.1",
+    "stylelint": "^14.0.1",
+    "stylelint-prettier": "^1.2.0",
+    "tailwindcss": "^2.2.19"
+  }
+}
